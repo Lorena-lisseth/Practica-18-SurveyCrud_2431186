@@ -26,7 +26,7 @@ public partial class TodoItemPage : ContentPage
     {
         if (string.IsNullOrWhiteSpace(Item.Name)||string.IsNullOrWhiteSpace(Item.FavoriteTeam))
         {
-            await DisplayAlert("Falta el del nombre de encuestado", "Ingrese el nombre del encuestado", "OK");
+            await DisplayAlert("Error","Por favor ingresa todos los datos", "OK");
             return;
         }
         
