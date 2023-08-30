@@ -24,11 +24,12 @@ public partial class TodoItemPage : ContentPage
 
     private async void OkButton_Clicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(Item.Name))
+        if (string.IsNullOrWhiteSpace(Item.Name)||string.IsNullOrWhiteSpace(Item.FavoriteTeam))
         {
             await DisplayAlert("Falta el del nombre de encuestado", "Ingrese el nombre del encuestado", "OK");
             return;
         }
+        
         var newtodo = new TodoItem()
         {
             Name = NameEntry.Text,
